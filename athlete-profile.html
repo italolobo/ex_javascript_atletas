@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Athlete Profile</title>
+    <link rel="stylesheet" type="text/css" href="styles/athlete.css" />
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="name">Barnabé Calhau Bonito</div>
+            <div class="boat">Kayak</div>
+            <!-- Can also be Canoe -->
+        </div>
+
+        <div class="profile">
+            <div class="profile-picture">
+                <img src="https://images.unsplash.com/photo-1500649297466-74794c70acfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                    id="picture" />
+            </div>
+            <div class="profile-info">
+                <div class="profile-row">
+                    <div class="profile-row-label">Country</div>
+                    <div id="country">Portugal</div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-row-label">Gender</div>
+                    <div id="gender">Male</div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-row-label">Weight</div>
+                    <div id="weight">82kg</div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-row-label">Height</div>
+                    <div id="height">1.88m</div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-row-label">Age</div>
+                    <div id="age"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="events">
+            <label>Events</label>
+            <div class="events-list">
+                '
+                <div class="event">
+                    ', '
+                    <div class="event-date">
+                        ', ' <span class="day">09</span>', '
+                        <div class="event-month-year">
+                            ', ' <span class="month">Feb</span>', '
+                            <span class="year">2020</span>', '
+                        </div>
+                        ', '
+                    </div>
+                    ', '
+                    <div class="event-info">
+                        ', '
+                        <div class="event-name">
+                            Passeio nocturno dos escuteiros de famalicão
+                        </div>
+                        ', '
+                        <div class="event-finishing-place">2rd place</div>
+                        ', '
+                    </div>
+                    ', '
+                </div>
+                ',
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">26</span>
+                        <div class="event-month-year">
+                            <span class="month">Jan</span>
+                            <span class="year">2020</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-name">
+                            Corrida solidária dos amigos da montanha
+                        </div>
+                        <div class="event-finishing-place">4th place</div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">05</span>
+                        <div class="event-month-year">
+                            <span class="month">Jan</span>
+                            <span class="year">2020</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-name">Torneio do rio este</div>
+                        <div class="event-finishing-place">1st place</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newEvent">
+            <div class="newEvents">
+                <label for="">New Event</label>
+            </div>
+            <div class="newEventsList">
+                <input type="date" name="new-date" id="new-date" placeholder="Data do evento" />
+                <input type="text" name="new-name" id="new-name" placeholder="Nome do evento" />
+                <input type="number" name="new-place" id="new-place" placeholder="Posição" />
+            </div>
+            <div class="btnNewEv">
+                <button id="btnNewEvent" class="btnNewEvent" onclick="addNewEvent()">
+                    Add Event
+                </button>
+            </div>
+        </div>
+        <br />
+    </div>
+    <script src="js/atletas.js"></script>
+</body>
+
+</html>

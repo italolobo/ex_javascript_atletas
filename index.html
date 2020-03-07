@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Web Developer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css"/>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+<article class="markdown-body">
+    <h1>Módulo 3: DOM (Document Object Model) </h1>
+    <ol>
+        <li>Introdução à DOM</li>
+        <li>Conteúdo Dinâmico com JavaScript</li>
+    </ol>
+
+    <h3>Exemplos</h3>
+    <pre>
+        <code class="javascript">
+
+
+// find elements by id
+let ul = document.getElementById('list');
+// find elements by tag name
+document.getElementsByTagName('ul');
+// find elements by tag name
+document.getElementsByClassName('myclass');
+// using css type of selectors
+let btnMinus = document.querySelector('[name="minus"]');
+
+// generate content
+ul.innerHTML = '&lt;li>new li</li>';
+console.dir(ul);
+document.getElementById('name').innerText ='John';
+console.log(ul);
+
+        </code>
+    </pre>
+
+    <pre>
+        <code class="markdown">
+Exercicio 3.1
+=============
+1. Copie o ficheiro athlete-profile.html (presente neste repositório) para a sua pasta de trabalho, bem como as suas dependências;
+2. Num Javascript, declare uma variável "atleta", com o seguinte valor: 
+    {
+        "name": "Fernando Pimento",
+        "boat": "K",
+        "country": "Portugal",
+        "gender": "M",
+        "weight": 81,
+        "height": 1.79,
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Fernando_Pimenta_ECH_2016.jpg/240px-Fernando_Pimenta_ECH_2016.jpg",
+        "birthdate": new Date("1989-08-13"), 
+        "events": [
+            {when: 1581120000000, "what": "Nelo Winter Challenge", "result": 1, "duration": 280000},
+            {when: 1579910400000, "what": "Controlo Nacional", "result": 1, "duration": 456000},
+            {when: 1567468800000, "what": "Russian President Cup", "result": 8, "duration": 90000},
+        ]
+    }
+3. Substitua, via Javascript, todo o conteúdo do athlete-profile.html pelos respectivos valores do atleta representado na variável "atleta"
+
+
+        </code>
+    </pre>
+
+
+
+    <pre>
+        <code class="javascript">
+
+// add styles to a DOM element
+// ---------------------------
+
+// add class (one or more)
+domElem.classList.add('btn', 'btn-primary');
+
+// change style directly
+domElem.style.height = "80px";
+domElem.style['background-color'] = 'red';
+        </code>
+    </pre>
+
+
+    <pre>
+        <code class="markdown">
+Exercicio 3.2
+=============
+1. Considere a página de perfil de atleta - para uma leitura mais fácil dos eventos, 
+coloque todos os eventos pares com uma cor de fundo de #eaeaea (utlizando javascript, apesar do mesmo efeito poder se atingido via css)
+2. Calcule o IMC do atleta (IMC = Peso[kg]/(altura * altura)[m]), e coloque uma cor de fundo no peso de acordo com a seguinte regra:
+    abaixo de 18.5: Demasiado magro
+    entre 18.6 e 24.9: Peso ideal
+    entre 25.0 e 29.9: Um pouco acima do peso
+    entre 30.0 e 34.9: Obesidade grau I
+    entre 35.0 e 39.9: Obesidade grau II (severa)
+    acima de 40: Obesidade grau III (mórbida)
+3. Adicione a idade do atleta ao seu perfil
+4. Substitua as linhas do HTML por linhas geradas via Javascript
+
+        </code>
+    </pre>
+
+
+    <pre>
+        <code class="javascript">
+
+btnMinus.addEventListener('click', clickHandler);
+function clickHandler(event) {
+    console.log('event triggered');
+    console.log('event => ', event);
+    console.log('context => ', this);
+//    this.removeEventListener('click', clickHandler);
+}
+
+// read values (create a new element)
+let input = document.getElementsByName('random-input')[0]; // why is it an array?
+console.log(input.value, input.value + 1);
+
+// what will be the result of typeof of the value of an input? And if the input type is numeric?
+console.log(typeof input.value);
+
+// exercise: do a calculator with 4 buttons for operators and equal for the result!
+console.log(parseInt(input.value));
+
+function plus() {
+    console.log('plus');
+}
+        </code>
+    </pre>
+</article>
+</body>
+</html>

@@ -1,0 +1,48 @@
+#ams {
+    background-color: #f8f8f8;
+    color: #848484;
+    width: 80vw;
+    margin: 200px auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.athlete-header {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.athlete-header > div {
+    width: 100%;
+    text-align: center;
+}
+
+.athlete-row {
+    display: flex;
+    color: #505284;
+    border-bottom: 1px solid #fff;
+    font-weight: 700;
+}
+
+
+.athlete-row > div, .athlete-name {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.athlete-name {
+    font-weight: normal;
+    color: #848484;
+}
+
+.athlete-birthdate {
+    background-color: #bf323221;
+}
+
+.athlete-red {
+    color: #ff6703;
+}
